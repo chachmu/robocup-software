@@ -1,9 +1,15 @@
-# GT RoboJackets RoboCup SSL [![Build Status](https://travis-ci.org/RoboJackets/robocup-software.png?branch=master)](https://travis-ci.org/RoboJackets/robocup-software)
+# GT RoboJackets RoboCup SSL
+
+[![Join the chat at https://gitter.im/chachmu/robocup-software](https://badges.gitter.im/chachmu/robocup-software.svg)](https://gitter.im/chachmu/robocup-software?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://circleci.com/gh/RoboJackets/robocup-software.svg?&style=shield)](https://circleci.com/gh/RoboJackets/robocup-software) [![OSX Build Status](https://travis-ci.org/RoboJackets/robocup-software.svg?branch=master)](https://travis-ci.org/RoboJackets/robocup-software) [![Coverage Status](https://coveralls.io/repos/RoboJackets/robocup-software/badge.svg?branch=master&service=github)](https://coveralls.io/github/RoboJackets/robocup-software?branch=master)
+
+[![Join the chat at https://gitter.im/RoboJackets/robocup-software](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/RoboJackets/robocup-software?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 The Georgia Tech RoboJackets team competes in the annual RoboCup Small Size League (SSL) competition.  This repository contains all of the software that we run on the main field laptop and on our robots.  More information on how our software works can be found on our [documentation page](http://robojackets.github.io/robocup-software/), our [wiki](http://wiki.robojackets.org/w/RoboCup_Software) or on our [website](http://www.robojackets.org/).
 Also, check out our [2014 qualification video](https://www.youtube.com/watch?v=H3F9HexPLT0) to see our robots in action!
 
+Here is a screenshot of our 'soccer' program:
 ![Screenshot of the 'soccer' program](doc/images/soccer.png "Soccer")
 
 
@@ -78,7 +84,15 @@ We use [Doxygen](www.doxygen.org) for documentation.  This allows us to convert 
 
 http://robojackets.github.io/robocup-software/
 
-Note: The doxygen documentation site above is updated automacally using travis-ci.  See our .travis.yml file for more info.
+Note: The doxygen documentation site above is updated automacally using circle-ci.  See our autoupdate-docs.sh file for more info.
 
 ## Testing
 We use [gtest](https://code.google.com/p/googletest/) for unit-testing our software, which can be run by running `make tests`.  To add a test to be run with the rest of the bunch, add a new file in soccer/tests.
+
+The soccer tests can be run using `make test-soccer` or firmware tests with `make test-firmware`.
+The TESTS name filter to run only certain tests. For example `make test-soccer TESTS=Point*` runs only the tests for the Point class.
+
+## License
+
+This project is licensed under the Apache License v2.0.  See the [LICENSE](LICENSE) file for more information.
+
